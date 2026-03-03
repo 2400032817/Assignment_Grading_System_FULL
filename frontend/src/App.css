@@ -1,0 +1,32 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import TeacherLogin from "./TeacherLogin";
+import StudentLogin from "./StudentLogin";
+import TeacherDashboard from "./TeacherDashboard";
+import StudentDashboard from "./StudentDashboard";
+import ForgotPassword from "./ForgotPassword";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Home */}
+        <Route path="/" element={<Home />} />
+
+        {/* Login Pages */}
+        <Route path="/teacher-login" element={<TeacherLogin />} />
+        <Route path="/student-login" element={<StudentLogin />} />
+
+        {/* Dashboards */}
+        <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
+        <Route path="/student-dashboard" element={<StudentDashboard />} />
+
+        {/* Forgot */}
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
