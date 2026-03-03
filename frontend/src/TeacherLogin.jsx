@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./pages/auth.css";
+import "./pages/Auth.css";   // ✅ FIXED (capital A)
 
 function TeacherLogin() {
   const navigate = useNavigate();
